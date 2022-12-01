@@ -46,7 +46,7 @@ let showDetails = `
                         <li><del>${productDetails.oldPrice}</del></li>
                     </ul>
                     <ul >
-                        <li><a class="buy mb-0" href="file:///E:/my_project/Bookland/Shop.html">Back To Shop</a></li>
+                        <li><a class="buy mb-0" href="https://shehapsamer.github.io/Book_Land/Shop.html">Back To Shop</a></li>
                         <li> <i class="fa-regular fa-heart"></i> </li>
                     </ul>
                    </ul>
