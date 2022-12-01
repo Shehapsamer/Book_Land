@@ -3,7 +3,20 @@ window.addEventListener("scroll", function () {
     let nav = document.querySelector("nav");
     nav.classList.toggle("tranz", window.scrollY > 100);
     nav.classList.toggle("fix", window.scrollY > 150);
+}) 
+//////////////////////////
+
+window.addEventListener("load", function () {
+    let loading = document.getElementById("loading");
+    document.body.style.overflow = "hidden";
+    
+    setTimeout(function () {
+        loading.style.display = "none";
+        document.body.style.overflow = "auto";
+    },2000);
+
 })
+
 
 // //////////////
 window.addEventListener("scroll", function () {
