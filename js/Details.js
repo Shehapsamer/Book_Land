@@ -1,6 +1,6 @@
 let detailsDom = document.querySelector(".details_dom");
 let productId = localStorage.getItem("productId");
-let productsInDetails = JSON.parse(localStorage.getItem("productsInLocal"))
+let productsInDetails = productsData
 
  
 let productDetails = productsInDetails.find((item) => item.id == productId);
@@ -47,7 +47,6 @@ let showDetails = `
                     </ul>
                     <ul >
                         <li><a class="buy mb-0" href="https://shehapsamer.github.io/Book_Land/Shop.html">Back To Shop</a></li>
-                        <li> <i class="fa-regular fa-heart"></i> </li>
                     </ul>
                    </ul>
             </div>

@@ -20,7 +20,7 @@ function productsViweInCart(allProducts = []) {
 
             <td> <h6>$ ${ item.priceInNumper * item.Quantity }</h6> </td>
 
-            <td> <button class="cloce_btn btn-danger" onclick="removeFromCart(${item.id})"><i class="fa-solid fa-xmark"></i></button> </td>
+            <td> <button class="cloce_btn btn-danger" onclick="removeFromCart(${item.id})"><i class="fa-solid fa-trash-can"></i></button> </td>
 
            </tr>`;
         

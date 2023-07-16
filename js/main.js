@@ -6,6 +6,7 @@ window.addEventListener("scroll", function () {
 }) 
 //////////////////////////
 
+//////////////////////////
 window.addEventListener("load", function () {
     let loading = document.getElementById("loading");
     document.body.style.overflow = "hidden";
@@ -13,9 +14,10 @@ window.addEventListener("load", function () {
     setTimeout(function () {
         loading.style.display = "none";
         document.body.style.overflow = "auto";
-    },2000);
+    },1000);
 
 })
+// /////////////////////
 
 
 // //////////////
@@ -109,31 +111,7 @@ $("#slider_3").owlCarousel({
     }
 })
 
-$("#slider_4").owlCarousel({
-    loop:true,
-    margin:10,
-    navigation: true,
-    autoplay: true,
-    smartSpeed:300,
-    animateIn:'fadeIn',
-    animateOut: 'fadeOut',
-    paginationSpeed : 800,
-    dots: false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-         1100:{
-            items:3
-        },
-        1200:{
-            items:5
-        }
-    }
-})
+
 
 $("#slider_5").owlCarousel({
     loop:true,
@@ -365,7 +343,7 @@ btn123.addEventListener("click", function () {
 
 
 
-let products = [
+let productsData = [
     {
         id: 1,
         Quantity: 1,
@@ -375,6 +353,7 @@ let products = [
         price: "$54.78",
         priceInNumper: 54.78,
         oldPrice: "$70.00",
+        liked:false,
         byWriting:"img/COMMENTS_2.jpg" 
     },
     {
@@ -546,4 +525,76 @@ let products = [
 
 
 ]
-localStorage.setItem("productsInLocal", JSON.stringify(products))
+
+
+let productsData2 = [
+    {
+        id: 1,
+        Quantity: 1,
+        imgUrl: "img/Recomended_1.jpg" ,
+        title: "Terrible Madness",
+        categories: "ADVANTURE , SCIENCE",
+        price: "$54.78",
+        priceInNumper: 54.78,
+        oldPrice: "$70.00",
+        liked:false,
+        byWriting:"img/COMMENTS_2.jpg" 
+    },
+    {
+        id: 2,
+        Quantity: 1,
+        imgUrl: "img/Recomended_3.jpg" ,
+        title: "Take Out Tango",
+        categories: "DRAMA, HORROR",
+        price: "$14.05",
+        priceInNumper: 14.05,
+        oldPrice: "$50.00",
+        byWriting:"img/COMMENTS_1.jpg"         
+    },
+    {
+        id: 3,
+        Quantity: 1,
+        imgUrl: "img/Recomended_4.jpg" ,
+        title: "Homie",
+        categories: "HORROR, DRAMA",
+        price: "$15.28",
+        priceInNumper: 54.78,
+        oldPrice: "$45.00",
+        byWriting:"img/COMMENTS_3.jpeg" 
+    },
+    {
+        id: 4,
+        Quantity: 1,
+        imgUrl: "img/Recomended_2.jpg" ,
+        title: "Cat Advan",
+        categories: "ADVANTURE , SCIENCE",
+        price: "$54.78",
+        priceInNumper: 54.78,
+        oldPrice: "$70.00",
+        byWriting:"img/Testimonials_1.jpg"  
+    },
+    {
+        id: 5,
+        Quantity: 1,
+        imgUrl: "img/Recomended_5.jpg" ,
+        title: "Thunder Stunt",
+        categories: "DRAMA, HORROR",
+        price: "$54.78",
+        priceInNumper: 54.78,
+        oldPrice: "$70.00",
+        byWriting:"img/COMMENTS_2.jpg" 
+    },
+        {
+        id: 6,
+        Quantity: 1,
+        imgUrl: "img/Recomended_6.jpg" ,
+        title: "Real Life",
+        categories: "ADVANTURE , SCIENCE",
+        price: "$14.50",
+        priceInNumper: 14.50,
+        oldPrice: "$35.00",
+        byWriting:"img/COMMENTS_3.jpeg" 
+    }
+
+
+]
