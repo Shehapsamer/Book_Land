@@ -211,12 +211,25 @@ section{
 
 .user_aco {
     position: absolute;
-    right: 210px;
-    top: 12px;
+    right: 400px;
+    top: 20px;
     display: flex;
     z-index: 1251652;
     align-items: center;
     transition: all ease-in .3s;
+}
+.user_aco .heart{
+    position: relative;
+}
+.user_aco .heart .loveProduct{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    color: #fff;
+    border-radius: 3px;
+    padding: 2px 5px;
+    font-size: 14px;
+    background-color: #000000;
 }
 
 .user_aco a li {
@@ -269,7 +282,7 @@ section{
     border-radius:3px ;
     padding:5px;
     font-size: 14px;
-    background-color: #ff0000;
+    background-color: #000000;
 }
 .user_aco li .cart_product{
     position: absolute;
@@ -1140,7 +1153,7 @@ nav{
 /*two section  */
 
 .recomended {
-    padding: 70px 0;
+    padding: 70px 0 !important;
     background: var(--bgColor);
 }
 
@@ -1181,8 +1194,9 @@ nav{
 
 .recomended .card_s4 h3 {
     color: var(--textColor);
-    margin-top: 10px;
-    font-size: 24px;
+    padding-top: 10px ;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .recomended .card_s4 p {
@@ -1191,7 +1205,7 @@ nav{
     margin: 10px 0;
 }
 
-.recomended .card_s4 a {
+.recomended .card_s4 button {
     padding: 12px 30px;
     background-color: #1a1668;
     color: #ffffff;
@@ -1202,6 +1216,7 @@ nav{
     overflow: hidden;
     font-size: 14px;
     margin-bottom: 90px;
+    border: none;
 }
 
 .recomended .card_s4 svg {
@@ -1213,7 +1228,7 @@ nav{
     transform: translateY(-50px);
 }
 
-.recomended .card_s4 a::before {
+.recomended .card_s4 button::before {
     background-color: rgba(255, 255, 255, 0.196);
     border-right: 2px solid #fff;
     content: "";
@@ -1229,7 +1244,7 @@ nav{
     z-index: 1;
 }
 
-.recomended .card_s4 a::after {
+.recomended .card_s4 button::after {
     background-color: rgba(255, 255, 255, 0.158);
     content: "";
     left: 0;
@@ -1244,20 +1259,20 @@ nav{
     transition-delay: .90s;
 }
 
-.recomended .card_s4 a:hover::before {
+.recomended .card_s4 button:hover::before {
     transform: translate(105%);
 }
 
-.recomended .card_s4 a:hover::after {
+.recomended .card_s4 button:hover::after {
     transform: translate(105%);
 }
 
-.recomended .card_s4 a:hover svg {
+.recomended .card_s4 button:hover svg {
     transform: translateY(50px);
     transition: all .5s;
 }
 
-.recomended .card_s4 a:hover .act {
+.recomended .card_s4 button:hover .act {
     transform: translateY(2.5px);
     transition: all .5s;
 }
@@ -2169,6 +2184,7 @@ position: absolute;
     cursor: pointer;
     display: inline-block;
     height: 60px;
+    z-index: 2626262;
     margin: -25px -15px;
     width: 60px;
 }
@@ -3495,6 +3511,30 @@ position: absolute;
     padding: 70px 10%;
 
 }
+.shop .search{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+.shop .search input{
+    width: 60%;
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid var(--textColor);
+    transition: all ease-in-out .3s;
+    background-color: var(--main_bgColor);
+    padding: 25px ;
+}
+.shop .search input::placeholder{
+    color: var(--textColor);
+    font-size:18px;
+    padding-left: 25px;
+}
+.shop .search input:focus{
+    width: 62%;
+    height: 50px;
+    border-color: var(--btnColor);
+}
 .shop .row .card{
     margin: 30px 0;
     background-color: var(--main_bgColor);
@@ -3558,8 +3598,36 @@ position: absolute;
 .shop .foot p{
     color: var(--pragrafColor);
 }
+.shop .card-body{
+    position: relative;
+    overflow: hidden;
+}
+.shop .fa-heart{
+    color: red;
+    position: absolute;
+    font-size: 25px;
+    bottom: 30px;
+    right: -30px;
+    transition: all ease-in .3s;
+}
+.shop .card:hover .fa-heart{
+    right: 20px;
+}
 
-
+.No_Products{
+    margin: auto;
+    padding: 70px 0;
+    text-align: center;
+    font-size: 25px;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+}
+.No_Products .fa-heart{
+    font-size: 70px;
+    text-align: center;
+    color: var(--btnColor);
+}
 
 
 
@@ -3591,10 +3659,20 @@ position: absolute;
         display: block;
         text-align: center;
     }
+    .shop .search input{
+        width: 90%;
+    }
+    .shop .search input:focus{
+        width: 95%;
+    }
 }
 /* ////////////////////// */
 .cart_page{
     padding: 70px 10%;
+}
+.cart_page table{
+    vertical-align: middle;
+    color: var(--textColor);
 }
 .cart_page table img{
     width: 80px;
@@ -3602,11 +3680,12 @@ position: absolute;
 }
 .cart_page table h2{
     font-size: 20px;
+    color: var(--textColor);
 }
 .cart_page table button{
     width: 50px;
     height: 50px;
-    color: #ffffff;
+    color: #ffffff !important;
     border-radius: 5px;
     border: none;
 }
@@ -3754,56 +3833,163 @@ position: absolute;
 .my_profile_s1 .top_cont h4{
     transition: all ease .3s;
 }
-
-.loading-screan{
+.loading-screan {
     position: fixed;
     width: 100%;
     height: 100%;
     transition: all linear .3s;
     right: 0;
     top: 0;
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     z-index: 6516516161651;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.loading-screan .the_load{
-    width: 100px;
-    height: 100px;
-    position: absolute;
+
+.loader {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgb(255, 255, 255);
-    animation: theLoad linear 2s infinite;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
 }
-@keyframes theLoad {
-    0%{
-        transform: rotate(0deg);
-        box-shadow: 1px 5px 2px var(--btnColor);
-    }
-    50% {
-        transform: rotate(180deg);
-        box-shadow: 1px 5px 2px var(--textColor);
-    }
-    100% {
-        transform: rotate(360deg);
-        box-shadow: 1px 5px 2px #f0bbe3;
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #4d4d4d;
+    animation: prixClipFix 2s linear infinite;
+}
+
+.loader::after {
+    border-color: #FF3D00;
+    animation: prixClipFix 2s linear infinite, rotate 0.5s linear infinite reverse;
+    inset: 6px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
     }
 
+    100% {
+        transform: rotate(360deg)
+    }
 }
-.loading-screan .the_load::before{
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 0;
+
+@keyframes prixClipFix {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+    }
+
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+    }
+
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+    }
+
+    75% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+    }
+}
+
+.loader2 {
+    position: relative;
+    display: block;
+    margin-top: 40px;
+}
+
+.loader2::before {
+
+    content: 'Loading';
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: floating 1s ease-out infinite alternate;
+}
+
+.loader2::after {
+    content: '';
     width: 100%;
-    height: 100%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    filter: blur(4px);
     border-radius: 50%;
-    box-shadow: 0 0 5px rgb(255, 255, 255, .3);
+    box-sizing: border-box;
+    animation: animloader 1s ease-out infinite alternate;
 }
-.loading-screan span{
-    font-size: 15px;
-    color: #8f8f8f;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes animloader {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.scroll_up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f9218d;
+    padding: 10px 14px;
+    border-radius: 50%;
+    color: #fff;
+    display: none;
+    z-index: 46555656;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.scroll_transaion {
+    transform: translateY(100px);
+    display: block;
+
+}
+
+.show_scroll {
+    transition: all .5s ease-in-out;
+    transform: translateY(0);
+    box-shadow: #8f8f8f 1px 1px 9px;
+
 }
